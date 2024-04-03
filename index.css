@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*sempre colocar essas informações no site*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*contar a caixa de borda a borda*/
+}
+
+/*como se fosse uma função, para usa-la em qualquer momento que eu quiser*/
+:root{
+    --border: 1px solid #ffffff1a;
+}
+
+body, table, input, button{
+    font: 300 16px/140% "Roboto", sans-serif;
+    /* 300 = font-weight = grossura da fonte */
+    /* 16px = font-size = tamanho da fonte */
+    /* 140% = line-height = altura da fonte */
+}
+
+body {
+    background-color: #121214;
+    color: white;
+    
+}
+
+.container{
+    max-width: 690px;
+    margin: 0 auto; 
+    /*0 = top e bottom(vertical)*/
+    /*auto = left e right(horizontal) */
+    padding: 20px 32px;
+}
+
+header{
+    padding: 20px 0;
+}
+
+form{
+    border: var(--border);
+    border-inline: none; 
+    /*bordas da horizontal*/ 
+    /*deve ser colocado depois de adicionar todas as bordas*/
+    padding: 20px 0;
+}
+
+fieldset{
+    border: none;   
+}
+
+fieldset > div{
+    display: flex;
+    gap: 12px; /*dar o espaçamento entre os input; so funciona com o display flex*/
+}
+/* o sinal de maior (>) especifica o primeiro nivel da div; se caso aparecesse outras, elas não seriam selecionadas*/
+
+.input-wrapper { /*seleciona o segundo nivel de div*/
+    flex: 1;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    border: var(--border);
+    border-radius: 10px;
+    padding: 8px 12px;
+    font: 400 14px/150% 'Roboto', sans-serif;
+    color: #c4c4cc;
+}
+
+input{
+    all: unset;
+}
+
+fieldset legend, section h2{
+    font: 700 16px/140% 'Roboto', sans-serif;
+    color:#E1E1E6;
+    padding-bottom: 16px;
+}
+
+fieldset button{
+    width: fit-content;
+    margin: 0;
+    padding: 7px 20px;
+    background-color: #F48F56;
+    font: 700 12px/24px 'Roboto', sans-serif;
+    color: #00292E;
+    border-radius: 10px;
+}
+
+fieldset button:hover{
+    background-color: #f58240;
+}
+
+.lista-participantes{
+    padding: 20px 0;
+}
+
+.lista-participantes > div{
+    border: var(--border);
+    border-radius: 8px;
+}
+
+table{
+    width: 100%; /*a largura da tabela seja correspondente a largura da tela*/
+    border-collapse: collapse; /*tirar o espaçamento das linhas da tabela*/
+}
+
+table thead {
+    font-size: 14px;
+    line-height:14px;
+    padding-top: 20px;
+    text-align: left; 
+}
+
+thead th, tbody td{
+    padding: 12px 16px; /*o primeiro valor representa top e bottom, e o segundo left e right*/
+}
+
+tbody td{
+    border-top: var(--border); /*1a=opacidade*/
+    font-size: 13px;
+    line-height: 15px;
+    color: #c4c4cc;
+}
+
+tbody td strong {
+    color: white;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+}
+
+tbody td small {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+tbody td button {
+    all: unset; /*retira todas as estilizações que o navegador colocou automaticamente*/
+    color: rgb(173, 210, 173);
+}
+
+tbody td button:hover{
+    text-decoration: underline;
+}
