@@ -7,14 +7,14 @@
     box-sizing: border-box; /*contar a caixa de borda a borda*/
 }
 
-/*como se fosse uma função, para usa-la em qualquer momento que eu quiser*/
+/*como se fosse uma função; para usar muitas vezes*/
 :root{
     --border: 1px solid #ffffff1a;
 }
 
 body, table, input, button{
     font: 300 16px/140% "Roboto", sans-serif;
-    /* 300 = font-weight = grossura da fonte */
+    /* 300 = font-weight = largura da fonte */
     /* 16px = font-size = tamanho da fonte */
     /* 140% = line-height = altura da fonte */
 }
@@ -49,11 +49,11 @@ fieldset{
     border: none;   
 }
 
-fieldset > div{
+fieldset > div{ /* o sinal de maior (>) especifica o primeiro nivel da div; se caso aparecesse outras, elas não seriam selecionadas*/
     display: flex;
-    gap: 12px; /*dar o espaçamento entre os input; so funciona com o display flex*/
+    gap: 12px; /*dar o espaçamento entre os input e o button; so funciona com o display flex*/
 }
-/* o sinal de maior (>) especifica o primeiro nivel da div; se caso aparecesse outras, elas não seriam selecionadas*/
+
 
 .input-wrapper { /*seleciona o segundo nivel de div*/
     flex: 1;

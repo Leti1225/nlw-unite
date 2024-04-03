@@ -1,3 +1,4 @@
+//array = [] =  lista de objetos que contêm múltiplos valores armazenados em uma lista.
 let participantes = [
     {
         nome: "Leticia Pinheiro",
@@ -61,6 +62,17 @@ let participantes = [
     }
 ];
 
+
+//let = informa ao sistema que posteriormente essa informação pode ser mudada
+//se a data de checkin for nula, vai aparecer um botão
+//data-email: impede que o mesmo email seja colocado duas vezes
+//onclick: quando clicar faça tal coisa
+//confirmar checkin: nome do botão
+//return = retorna para a tela todo o texto que ta dentro das tags
+// NÃO ESQUECER DE COLOCAR ``(crase dupla) para cada valor que você quer retornar
+//dentro das `` coloca o que quer retorna (qualquer coisa)
+//${(objeto).(elemento do objeto)}
+
 const criarNovoParticipante = (participante) => {
     const dataInscricao = dayjs(Date.now()).to(participante.dataInscricao)
     let dataCheckin = dayjs(Date.now()).to(participante.dataCheckin) 
@@ -89,6 +101,16 @@ const criarNovoParticipante = (participante) => {
   `
   }
 
+
+//output = vazio
+//estrutura de repetição (loop)
+//para cada participante da lista de participantes coloque vazio = vazio + participante
+//essa repetição ocorre até acabar a lista de participantes
+//document= página da Web (HTML)
+//querySelector = indicar a seleção de uma class(.), id(#) ou tag
+//innerHTML = retorna todo o conteúdo de texto do elemento, incluindo todas as marcas HTML internas e de espaçamento.
+//no tbody, vai aparecer o que ta dentro do criarNovoParticipante
+
 const atualizarLista = (participantes) => {
     let output = "" 
     for (let participante of participantes){
@@ -103,6 +125,10 @@ const atualizarLista = (participantes) => {
 
 atualizarLista(participantes)
 
+
+//constante para receber dados
+//FormData=dados do formulario
+//event.target=define o alvo principal do formulario(form)
 const adicionarParticipante = (event) => {
     event.preventDefault() 
 
@@ -115,6 +141,7 @@ const adicionarParticipante = (event) => {
         dataCheckin: null 
         }
 
+    //verificar se o participante já existe
     const participanteExiste = participantes.find ((p) => p.email == participante.email)
     if (participanteExiste) {
         alert('Email já cadastrado!')
@@ -136,12 +163,14 @@ const fazerCheckin = (event) => {
         return
     }
 
+    //encontrar o participante dentro da lista
     const participante = participantes.find((p)=> {
         return p.email = event.target.dataset.email
     })
 
+    //atualizar o check-in do participante
     participante.dataCheckin = new Date()
 
+    ////atualizar a lista de participantes
     atualizarLista(participantes)
 }
-

@@ -7,15 +7,11 @@
     <title>Página do evento</title>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/relativeTime.js"></script>
-    <script>
-      dayjs.extend(window.dayjs_plugin_relativeTime)
-    </script>
+    <script>dayjs.extend(window.dayjs_plugin_relativeTime)</script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/pt-br.js"></script>
-    <script>
-      dayjs.locale('pt-br')
-    </script>
-    <script type="text/javascript" src="./index.js" defer=""></script>
-    <link rel="stylesheet" href="./index.css">
+    <script>dayjs.locale('pt-br')</script>
+    <script type="text/javascript" src="index.js" defer=""></script>
+    <link rel="stylesheet" href="index.css">
   </head>
 
   <body>
@@ -28,12 +24,12 @@
         </svg>
       </header>
 
-      <form onsubmit="adicionarParticipante(event)">
+      <form onsubmit="adicionarParticipante(event)"> <!--onsubmit="adicionarParticipante(event) -> chamar a função para realizar as instruções que estão dentro dela-->
         <fieldset>
           <legend>Inscrição</legend>
           <div>
-            <div class="input-wrapper">
 
+            <div class="input-wrapper">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_4003_2796)">
                   <path d="M12 13.3333C12 12.2724 11.5786 11.255 10.8284 10.5048C10.0783 9.75468 9.06087 9.33325 8 9.33325C6.93913 9.33325 5.92172 9.75468 5.17157 10.5048C4.42143 11.255 4 12.2724 4 13.3333" stroke="#9FF9CC" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -52,7 +48,6 @@
             </div>
 
             <div class="input-wrapper">
-
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_4003_2802)">
                   <path d="M8.00004 10.6666C9.4728 10.6666 10.6667 9.47268 10.6667 7.99992C10.6667 6.52716 9.4728 5.33325 8.00004 5.33325C6.52728 5.33325 5.33337 6.52716 5.33337 7.99992C5.33337 9.47268 6.52728 10.6666 8.00004 10.6666Z" stroke="#9FF9CC" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -70,7 +65,6 @@
             </div>
 
             <button>REALIZAR INSCRIÇÃO</button>
-
           </div>
         </fieldset>
       </form>
@@ -90,7 +84,7 @@
 
             <tbody> <!--corpo da tabela-->
               <tr> <!--linha da tabela-->
-                <td> <!--elemento da linha do corpo da tabela-->
+                <td> <!--elementos da linha do corpo da tabela-->
                   <strong>Diego Fernandes</strong> <!--destacar-->
                   <br>
                   <small>diego@gmail.com</small> <!--diminuir-->
@@ -104,7 +98,5 @@
 
       </section>
     </div>
-
   </body>
-
 </html>
